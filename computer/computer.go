@@ -3,9 +3,10 @@ package object
 import (
 	"fmt"
 
-	_ "github.com/gunzill89/computer/levelBranch"
+	_ "github.com/Gunzilla89/computer/levelBranch"
 )
 
+// create player
 var player Player
 
 type Computer struct {
@@ -66,7 +67,6 @@ func level1() {
 		fmt.Println("You are so nice")
 		fmt.Println("Press enter to continue...")
 		TakeUserInput()
-		level1B1()
 
 	case "2":
 		fmt.Println("You are so mean!!!!")
