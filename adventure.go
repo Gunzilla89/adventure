@@ -1,17 +1,26 @@
 package main
 
 import (
-	c "github.com/gunzilla89/adventure/computer"
+	com "github.com/gunzilla89/adventure/computer"
+	levelSim "github.com/gunzilla89/adventure/levelSim"
+	utility "github.com/gunzilla89/adventure/utilities"
 )
 
 func main() {
 
 	playGame := true
-	var computer c.Computer = c.Computer{Level: 0}
+	var computer com.Computer = com.Computer{Level: 0}
 
 	for playGame {
-		c.PlayCurrentLevel(computer.Level)
+		com.PlayCurrentLevel(computer.Level)
 		computer.GoUpLevel(computer.Level)
+
+		com.PlayCurrentLevel(computer.Level)
+		answer := utility.TakeUserInput()
+		levelSim.MainLevel1(answer)
+
+		playGame = false
+
 	}
 
 }
