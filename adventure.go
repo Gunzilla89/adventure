@@ -1,22 +1,17 @@
 package main
 
 import (
-	"fmt"
-
 	c "github.com/gunzilla89/adventure/computer"
 )
 
 func main() {
 
-	//loop game
-	runGame := true
-	for runGame {
+	playGame := true
+	var computer c.Computer = c.Computer{Level: 0}
 
-		c.ComTalk(0)
-		answer := c.TakeInput()
-
-		fmt.Print(answer)
-
+	for playGame {
+		c.PlayCurrentLevel(computer.Level)
+		computer.GoUpLevel(computer.Level)
 	}
 
 }

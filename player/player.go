@@ -1,10 +1,5 @@
-package main
+package playerController
 
-type player struct {
+type Player struct {
 	Name string
-}
-
-//player stats
-func (player player) playerStats(playerName string) {
-	player.Name = playerName
 }
